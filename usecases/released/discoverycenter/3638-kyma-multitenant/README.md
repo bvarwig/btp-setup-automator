@@ -57,33 +57,33 @@ You'll notice that the prompt in your terminal has changed, because you are now 
 
 Before we run the main script you should modify the parameter.json inside the container and add your email address in the member section: 
 1. Navigate to the parameter file 
-```bash
-cd usecases/released/discoverycenter/3999-kyma-day2-operations
-```
+   ```bash
+   cd usecases/released/discoverycenter/3999-kyma-day2-operations
+   ```
 1. Open the parameter.json in vi
-```bash
-vi parameter.json
-```
+   ```bash
+   vi parameter.json
+   ```
 1. Search for "myusergroups" and enter your email address in the free line below the members tag:
-```json
-"myusergroups": [                                                                                                     
-    {                                                                                                                   
-      "name": "admins",                                                                                                 
-      "members": [                                                                                                      
-          "your-email@something.com"                                                                                    
-      ]                                                                                                                 
-    }                                                                                                     
-  ]                                                                                                                  
-```
+   ```json
+   "myusergroups": [                                                                                                     
+       {                                                                                                                   
+         "name": "admins",                                                                                                 
+         "members": [                                                                                                      
+             "your-email@something.com"                                                                                    
+         ]                                                                                                                 
+       }                                                                                                     
+     ]                                                                                                                  
+   ```
 1. Save your changes
-```bash
-:wq 
-```
+   ```bash
+   :wq 
+   ```
 
-Now run the main script `btpsa` with the following command:
+   Now run the main script `btpsa` with the following command:
 
-```bash
-./btpsa -parameterfile 'usecases/released/discoverycenter/3638-kyma-multitenant/parameters.json' -globalaccount '<your global account subdomain as shown in the SAP BTP cockpit>' -myemail '<your email address>'
-```
+   ```bash
+   ./btpsa -parameterfile 'usecases/released/discoverycenter/3638-kyma-multitenant/parameters.json' -globalaccount '<your global account subdomain as shown in the SAP BTP cockpit>' -myemail '<your email address>'
+   ```
 
 The btp-setup-automator script will now prepare your SAP BTP account to cover the discovery center mission. You can have a look at the [usecase.json](usecase.json) and [parameters.json](parameters.json) for more details about the used services and configuration parameters (e.g. DB Password for SAP HANA Cloud)
